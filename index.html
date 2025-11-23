@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BNB Asu | Rentabilidad Garantizada</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Outfit', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                black: '#0a0a0a',
+                dark: '#171717',
+                gold: '#FACC15', // Amarillo Intenso
+                goldhover: '#EAB308',
+                money: '#22c55e' // Verde Billete
+              }
+            },
+            animation: {
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Efecto Glow en textos y botones */
+      .glow-text {
+        text-shadow: 0 0 20px rgba(250, 204, 21, 0.5);
+      }
+      .glow-box {
+        box-shadow: 0 0 25px rgba(250, 204, 21, 0.15);
+      }
+      /* Gradiente sutil animado para fondo */
+      .animated-bg {
+        background: linear-gradient(-45deg, #0a0a0a, #1a1a1a, #0f0f0f);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+      }
+      @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      
+      /* Custom Scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #171717;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #333;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #FACC15;
+      }
+    </style>
+    <script type="importmap">
+    {
+      "imports": {
+        "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+        "react/": "https://aistudiocdn.com/react@^19.2.0/",
+        "react": "https://aistudiocdn.com/react@^19.2.0",
+        "recharts": "https://aistudiocdn.com/recharts@^3.5.0"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-brand-black text-slate-200 overflow-x-hidden font-sans selection:bg-brand-gold selection:text-black">
+    <div id="root"></div>
+  </body>
+</html>
